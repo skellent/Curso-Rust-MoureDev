@@ -1,0 +1,10 @@
+[package]
+name = "Ejercicio-1"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+path="src/main.rs"
+name="Ejercicio-1"
+
+[dependencies]
