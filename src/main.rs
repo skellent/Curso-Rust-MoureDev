@@ -1,6 +1,17 @@
 use std::io::Write;
 
-/* Ejercicio 1 */
+fn input(enunciado: &str) -> String {
+    print!("{enunciado}\n [Input]> ");
+    let mut input: String = String::new();
+    std::io::stdout()
+        .flush()
+        .expect("Ocurrio un error al vaciar stdout");
+    std::io::stdin()
+        .read_line(&mut input)
+        .expect("> Ocurrio un error al leer el Input");
+    input
+}
+
 fn main() {
     let mut saludo: &str = "¡Hola, Skellent!";
     println!("> Saludo: {}", saludo); // Saluda: ¡Hola, Skellent!
@@ -40,5 +51,8 @@ fn main() {
     println!("> División ( {} / {} ) es {} ", numero, numero, numero / numero);
     println!("> Potencia de 2 ( {} ) es {} ", numero, numero.pow(2));
 
+    /* OBTENCION DE INPUTS CON MI FUNCION PERSONALIZADA */
+    let prueba_input: String = input("Ingrese un Texto: ");
+    println!("> Echo: {}", prueba_input)
 
 }
